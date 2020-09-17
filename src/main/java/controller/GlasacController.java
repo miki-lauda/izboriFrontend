@@ -16,15 +16,10 @@ import model.Glasac;
 @RequestMapping(value = "glasac")
 public class GlasacController {
 
-	@PutMapping(value="/dodajGlasaca",consumes = "application/json")
+	@PostMapping(value="/dodajGlasaca",consumes = "application/json")
 	public ResponseEntity<Boolean> dodajGlasaca(@RequestBody Glasac glasac){
 		System.out.println(glasac.toString());
 		return new ResponseEntity<>(true,HttpStatus.OK);
 	}
-	
-	@GetMapping(value="/dodajGlasaca")
-	public ResponseEntity<Boolean> dodajGlasaca(){
-		System.out.println("fgfdgfgdfgfdgdf");
-		return new ResponseEntity<>(true,HttpStatus.OK);
-	}
+
 }
